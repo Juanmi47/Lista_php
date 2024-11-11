@@ -40,7 +40,7 @@
         function llamada_a_controller(metodo, postData) {
             const url = 'http://desarrollo.cierva/lista/controller.php';
             const lista = document.getElementById('lista');
-            lista.innerHTML = ''; // Limpiar la lista para actualizarla
+            lista.innerHTML = '';
 
             fetch(url, {
                 method: metodo,
@@ -86,7 +86,7 @@
         function editar(item_id, content) {
             const nuevoContenido = prompt("Edita la tarea:", content);
             if (nuevoContenido === null || nuevoContenido.trim() === "") {
-                return; // Si el usuario cancela o deja el campo vacío, no hacer nada
+                return;
             }
 
             const postData = {
@@ -107,7 +107,7 @@
                 content: contenido
             };
             llamada_a_controller("POST", postData);
-            document.getElementById('content').value = ""; // Limpiar el campo de entrada
+            document.getElementById('content').value = "";
         });
     </script>
 </body>

@@ -1,4 +1,3 @@
-/* Estilos básicos */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -61,7 +60,7 @@ button:hover {
     align-items: center;
 }
 
-/* Contenedor para los botones */
+
 .button-group {
     display: flex;
 
