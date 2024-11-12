@@ -33,7 +33,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $db = new DB();
         $update_todo = new Todo;
         $update_todo->jsonConstruct($bodyRequest);
-        $update_todo->DB_update($db->connection);
+        $update_todo->DB_edit($db->connection);
         $todo_list = Todo::DB_selectAll($db->connection);
         return_response(200, "OK", $todo_list);
         break;
